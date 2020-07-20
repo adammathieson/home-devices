@@ -1,14 +1,20 @@
 body {
     background: #353434;
+    margin: 0 auto;
 
 }
 
 .container {
-    margin: 0 auto;
+    border: 1px solid red;
+
     height: 100vh;
-    width: 50vw;
+    width: 100vw;
 }
 svg {
     height: 100%;
-    width: 100%
+    width: 100%;
+} 
+
+#guy {
+    transform: translateX(10%);
 }
