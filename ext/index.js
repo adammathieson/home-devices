@@ -34,6 +34,6 @@ const tl = gsap.timeline()
     tl.to("#guy-side", {display: "none"},"-=0.5")
     tl.to("#guy-back", {display: "block"})
     tl.to("#guy-back", 3, {scale: 0.43, y:22, x:5, onComplete: stopWalking})
-    tl.to("#scene-1", {attr:{viewBox: "150 250 207 448"}, duration: 3}, "-=3.2")
+    tl.to("#scene-1", {attr:{viewBox: "100 250 207 448"}, duration: 3}, "-=3.2")
 
     // attr:{viewBox: "0 250 414 400"}
