@@ -32,7 +32,7 @@ const stopStep = () => {
 const tl = gsap.timeline()
     tl.to("#scene-3", {attr:{viewBox: "475 290 100 50"}, delay: 0, duration: 1})
 
-    tl.to("#lock-turn", {rotate: 90, duration: 3, delay: 0.5, transformOrigin: "50% 50%"})
+    tl.to("#lock-turn", {rotate: 90, duration: 2.5, delay: 0.5, ease: Linear.easeNone, transformOrigin: "50% 50%"})
     tl.to("#lock-light", {fill:"#7FFF00", repeat: 3})
 
     tl.to("#scene-3", {attr:{viewBox: "0 0 838 596"}, delay: 1, duration: 1})
