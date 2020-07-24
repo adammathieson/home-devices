@@ -46,6 +46,7 @@ const goToScene2 = () => {
     window.location.pathname = "scene2.html"
 }
 
+// tl.pause()
 const tl = gsap.timeline()
     tl.fromTo("#scene-1", 1, {opacity: 0}, {opacity: 1})
     tl.to("#bg-houses", {x: -60, duration: 6, ease: Linear.easeNone}, "-=1.5")

@@ -13,6 +13,13 @@ const cam = document.querySelector("#wyze-outdoor-cam").style.display = "none"
 const base = document.querySelector("#base").style.display = "none"
 const logo = document.querySelector("#wyze-logo").style.display = "none"
 
+const replay = () => {
+    window.location.pathname = '/scene1.html'
+}
+
+const btn = document.querySelector("#replay")
+btn.addEventListener("click", replay)
+
 
 const tl = gsap.timeline()
     tl.fromTo("#guy4, #chair-front", 2, {x: 1000}, {x: 0, ease: Linear.easeNone})
@@ -40,6 +47,8 @@ const tl = gsap.timeline()
     tl.to("#arm-int-right", .2, {rotate: -120}, "-=.2")
 
     tl.to("#wyze-logo", {display: "block"})
+
+    tl.to("#replay", .2, {display: "block", x: -5, y:5, delay: .8})
 
 
     
