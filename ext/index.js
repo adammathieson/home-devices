@@ -19,8 +19,6 @@ const swapItem = () => {
     infoCard(item2)
 }
 
-const guyBack = document.querySelector("#guy-back").style.display = "none"
-
 const rLeg = TweenMax.fromTo("#leg-right", .5, {rotate: 6}, {rotate: -6, ease:Linear.easeNone, repeat:-1, yoyo: true});
 rLeg.progress(0.5).pause();
 rLeg.play();

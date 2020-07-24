@@ -34,7 +34,6 @@ const item = {
 infoCard(item)
 
 const tl = gsap.timeline()
-    tl.set("#guy-back3", {display: "none"})
     tl.fromTo("#scene-3", 1, {opacity: 0}, {opacity: 1})      
     tl.to("#scene-3", {attr:{viewBox: "475 290 100 50"}, delay: 1, duration: 1})
     tl.to("#card", {display: "block"})
