@@ -1,3 +1,23 @@
+import { infoCard } from "../info-card/index.js"
+
+const item = {
+    title: "Wyze Cam V2",
+    fact1: "Night Vision, 2-way Audio",
+    fact2: "1080p Full HD, 8x Digital Zoom",
+    price: "$19.99"
+}
+const item2 = {
+    title: "Wyze Lock Keypad",
+    fact1: "Wire Free, One-touch Lock",
+    fact2: "Time-based Guest Codes",
+    price: "$19.99"
+}
+let tempCard = item
+infoCard(tempCard)
+
+const swapItem = () => {
+    infoCard(item2)
+}
 
 const guyBack = document.querySelector("#guy-back").style.display = "none"
 
@@ -26,15 +46,6 @@ const goToScene2 = () => {
     window.location.pathname = "scene2.html"
 }
 
-// const tlWalk = gsap.timeline({repeat: -1, duration: .5, yoyo: true})
-
-// tlWalk.set("#guy-back", {transformOrigin: "50%, 0%"})
-
-// tlWalk.fromTo("#leg-right", {rotate: 10}, {rotate: -10, ease: Linear.easeNone})
-// tlWalk.fromTo("#leg-left", {rotate: -10}, {rotate: 10, ease: "none"}, '-=1')
-
-// tlWalk.pause()
-
 const tl = gsap.timeline()
     tl.fromTo("#scene-1", 1, {opacity: 0}, {opacity: 1})
     tl.to("#bg-houses", {x: -60, duration: 6, ease: Linear.easeNone}, "-=1.5")
@@ -44,9 +55,19 @@ const tl = gsap.timeline()
     tl.to("#guy-back", {display: "block", duration: 0})
     tl.to("#scene-1", 3,{attr:{viewBox: "400 200 400 148"}})
     tl.to("#guy", 3, {scale:0.43, y: -16, onComplete: stopWalking}, "-=3")
-    tl.to("#scene-1", 2, {attr:{viewBox: "585 240 100 70"}})
-    tl.to("#scene-1", 2, {attr:{viewBox: "570 290 100 70"}, delay: 3})
-    tl.to("#scene-1", 2, {attr:{viewBox: "570 290 100 70"}, delay: 2})
+
+    tl.to("#scene-1", 2, {attr:{viewBox: "585 260 80 40"}})
+    tl.to("#card", {display: "block"})
+    tl.fromTo("#card", .3, {x: 100, y: 300, opacity: 0}, {x: 370, opacity: 1})
+    tl.to("#card", .3, {opacity: 0, delay: 4})
+    tl.to("#card", {display: "none", onComplete: swapItem})
+
+    tl.to("#scene-1", 2, {attr:{viewBox: "600 310 80 40"}})
+    tl.to("#card", {display: "block"})
+    tl.fromTo("#card", .3, {x: 800, y: 240, opacity: 0}, {x: 630, opacity: 1})
+    tl.to("#card", .3, {opacity: 0, delay: 4})
+
+    // tl.to("#scene-1", 2, {attr:{viewBox: "570 290 100 70"}, delay: 2})
     tl.to("#scene-1", 2, {attr:{viewBox: "400 200 400 148"}})
     tl.fromTo("#scene-1", 1, {opacity: 1}, {opacity: 0, onComplete: goToScene2})
 

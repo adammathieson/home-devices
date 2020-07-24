@@ -1,3 +1,4 @@
+import { infoCard } from "../info-card/index.js"
 
 const guy = document.querySelector("#guy3")
 guy.style.display = "none"
@@ -33,11 +34,22 @@ const goToScene4 = () => {
     window.location.pathname = '/scene4.html'
 }
 
+const item = {
+    title: "Wyze Lock",
+    fact1: "Remote Access",
+    fact2: "Auto lock / unlock",
+    price: "$99.99"
+}
+infoCard(item)
+
 const tl = gsap.timeline()
     tl.fromTo("#scene-3", 1, {opacity: 0}, {opacity: 1})      
-    tl.to("#scene-3", {attr:{viewBox: "475 290 100 50"}, delay: 2, duration: 1})
+    tl.to("#scene-3", {attr:{viewBox: "475 290 100 50"}, delay: 1, duration: 1})
+    tl.to("#card", {display: "block"})
+    tl.fromTo("#card", .3, {x: 20, y: 180, opacity: 0}, {x: 200, opacity: 1})
+    tl.to("#card", .3, {opacity: 0, delay: 4})
 
-    tl.to("#lock-turn", {rotate: 90, duration: 2.5, delay: 0.5, ease: Linear.easeNone, transformOrigin: "50% 50%"})
+    tl.to("#lock-turn", {rotate: 90, duration: 2, delay: 0.5, ease: Linear.easeNone, transformOrigin: "50% 50%"}, "-=1")
     tl.to("#lock-light", {fill:"#7FFF00", repeat: 3})
 
     tl.to("#scene-3", {attr:{viewBox: "0 0 838 596"}, delay: 1, duration: 1})

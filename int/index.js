@@ -1,5 +1,12 @@
-//temp
-// const tempView = TweenMax.to("#scene-2", {attr:{viewBox: "250 300 110 70"}, duration: 0})
+import { infoCard } from "../info-card/index.js"
+
+const item = {
+    title: "Wyze Cam Pan",
+    fact1: "360° coverage in under 3 seconds",
+    fact2: "1080p Full HD",
+    price: "$29.99"
+}
+infoCard(item)
 
 const msg = document.querySelector("#alert-msg")
 msg.style.display = "none"
@@ -42,6 +49,10 @@ const goToScene3 = () => {
 const tl = gsap.timeline()
 tl.fromTo("#scene-2", 1, {opacity: 0}, {opacity: 1})
     tl.to("#scene-2", {attr:{viewBox: "483 155 100 50"}, delay: 2, duration: 2})
+    tl.to("#card", {display: "block"})
+    tl.fromTo("#card", .3, {x: 20, y: 180, opacity: 0}, {x: 150, opacity: 1})
+    tl.to("#card", .3, {opacity: 0, delay: 4})
+
     tl.to("#scene-2", {attr:{viewBox: "0 0 838 596"}, delay: 2, duration: 2})
     tl.to("#scene-2", {attr:{viewBox: "260 275 150 100"}, duration: 2, onComplete: stopTyping})
 

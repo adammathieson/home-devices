@@ -9,4 +9,5 @@ export const infoCard = item => {
     fact1.textContent = item.fact1
     fact2.textContent = item.fact2
     price.textContent = item.price
+    
 }
