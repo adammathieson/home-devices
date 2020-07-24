@@ -52,7 +52,11 @@ svg {
 }
 
 /* Some preset for images to start out */
-#scene-1 {
+#scene-1,
+#scene-2,
+#scene-3,
+#scene-4
+{
     opacity: 0;
 }
 

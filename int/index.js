@@ -26,7 +26,7 @@ const goToScene3 = () => {
 }
 
 const tl = gsap.timeline()
-tl.fromTo("#scene-2", 1, {opacity: 0}, {opacity: 1})
+    tl.to("#scene-2", 1, {opacity: 1})
     tl.to("#scene-2", {attr:{viewBox: "483 155 100 50"}, delay: 2, duration: 2})
     tl.to("#card", {display: "block"})
     tl.fromTo("#card", .3, {x: 20, y: 180, opacity: 0}, {x: 150, opacity: 1})
@@ -65,7 +65,7 @@ tl.fromTo("#scene-2", 1, {opacity: 0}, {opacity: 1})
     tl.to("#locked", {display: "none"})
     tl.to("#Locked", {display: "none"})
     tl.to("#Unlocked", {display: "block"})
-    tl.fromTo("#scene-2", .5, {opacity: 1}, {opacity: 0, onComplete: goToScene3})
+    tl.to("#scene-2", .5, {opacity: 0, onComplete: goToScene3})
     
 
 

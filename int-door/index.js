@@ -34,7 +34,7 @@ const item = {
 infoCard(item)
 
 const tl = gsap.timeline()
-    tl.fromTo("#scene-3", 1, {opacity: 0}, {opacity: 1})      
+    tl.to("#scene-3", 1, {opacity: 1})      
     tl.to("#scene-3", {attr:{viewBox: "475 290 100 50"}, delay: 1, duration: 1})
     tl.to("#card", {display: "block"})
     tl.fromTo("#card", .3, {x: 20, y: 180, opacity: 0}, {x: 200, opacity: 1})
@@ -67,7 +67,7 @@ const tl = gsap.timeline()
     tl.to("#door3", {display: "block"})
     tl.to("#guy-front-static", {display: "block", x:-30, duration: 0}, "-=.5")
     tl.to("#guy-front-static", { x: -50, y: 100, scale: 0.8, duration: 2.2})
-    tl.fromTo("#scene-3", 1, {opacity: 1}, {opacity: 0, onComplete: goToScene4})
+    tl.to("#scene-3", 1, {opacity: 0, onComplete: goToScene4})
 
 
     
