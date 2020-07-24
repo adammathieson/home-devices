@@ -14,7 +14,7 @@ const base = document.querySelector("#base").style.display = "none"
 const logo = document.querySelector("#wyze-logo").style.display = "none"
 
 const replay = () => {
-    window.location.pathname = '/scene1.html'
+    window.location.pathname = '/index.html'
 }
 
 const btn = document.querySelector("#replay")
