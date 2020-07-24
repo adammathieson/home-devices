@@ -53,7 +53,7 @@ tl.fromTo("#scene-2", 1, {opacity: 0}, {opacity: 1})
     tl.fromTo("#card", .3, {x: 20, y: 180, opacity: 0}, {x: 150, opacity: 1})
     tl.to("#card", .3, {opacity: 0, delay: 4})
 
-    tl.to("#scene-2", {attr:{viewBox: "0 0 838 596"}, delay: 2, duration: 2})
+    tl.to("#scene-2", {attr:{viewBox: "0 0 838 596"}, duration: 2})
     tl.to("#scene-2", {attr:{viewBox: "260 275 150 100"}, duration: 2, onComplete: stopTyping})
 
     // Filling out application
@@ -75,17 +75,18 @@ tl.fromTo("#scene-2", 1, {opacity: 0}, {opacity: 1})
     tl.to("#msg-box", {stroke: "none"})
     tl.to("#alert-msg", {display: "block", delay: .3})
     tl.fromTo("#alert-msg", {opacity: 0, x: 5}, {opacity: 1, x:0})
-    tl.to("#cursor", {x: 5, y: -43, duration: 1})
+    tl.to("#cursor", {x: 5, y: -43, duration: 1, delay: 1})
     tl.to("#msg-box", {stroke: "#4DFF16"})
 
     // Cam feed
     tl.to("#cam-feed", {display: "block"})
-    tl.to("#alert-msg", {display: "none", delay: .05})
-    tl.fromTo("#cursor", {x: 5, y: -43}, {x: -2, y: -15, duration: .6})
+    tl.to("#alert-msg", {opacity: 0, x: 5, delay: .05})
+    // tl.to("#alert-msg", {display: "none"})
+    tl.fromTo("#cursor", {x: 5, y: -43}, {x: -2, y: -15, duration: .6, delay: 1})
     tl.to("#locked", {display: "none"})
     tl.to("#Locked", {display: "none"})
     tl.to("#Unlocked", {display: "block"})
-    tl.fromTo("#scene-2", 1, {opacity: 1}, {opacity: 0, onComplete: goToScene3})
+    tl.fromTo("#scene-2", .5, {opacity: 1}, {opacity: 0, onComplete: goToScene3})
     
 
 

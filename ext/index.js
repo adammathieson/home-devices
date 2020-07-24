@@ -69,7 +69,7 @@ const tl = gsap.timeline()
 
     // tl.to("#scene-1", 2, {attr:{viewBox: "570 290 100 70"}, delay: 2})
     tl.to("#scene-1", 2, {attr:{viewBox: "400 200 400 148"}})
-    tl.fromTo("#scene-1", 1, {opacity: 1}, {opacity: 0, onComplete: goToScene2})
+    tl.fromTo("#scene-1", .5, {opacity: 1}, {opacity: 0, onComplete: goToScene2})
 
 
 

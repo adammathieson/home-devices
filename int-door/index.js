@@ -43,6 +43,7 @@ const item = {
 infoCard(item)
 
 const tl = gsap.timeline()
+    tl.set("#guy-back3", {display: "none"})
     tl.fromTo("#scene-3", 1, {opacity: 0}, {opacity: 1})      
     tl.to("#scene-3", {attr:{viewBox: "475 290 100 50"}, delay: 1, duration: 1})
     tl.to("#card", {display: "block"})
@@ -56,11 +57,10 @@ const tl = gsap.timeline()
     
     tl.to("#door3", {display: "none"})
     tl.to("#door-open3", {display: "block"})
-    tl.to("#guy-back3", {display: "none"})
-    tl.to("#guy-front-static", {display: "none"}, "-=.5")
+    tl.to("#guy-front-static", {display: "none"})
     tl.to("#guy3", {display: "block"})
-    
-    tl.to("#guy3", {x: -320, y: 30, duration: 2.5, onComplete: stopStep})
+
+    tl.to("#guy3", {x: -320, y: 30, duration: 2.5, onComplete: stopStep}, "-=.5")
     
     tl.to("#arm-front-face-right-3", {rotate: 5, duration: 0.05, transformOrigin: "100% 0%"})
     tl.to("#arm-front-face-left-3", {rotate: 5, duration: 0.05, transformOrigin: "100% 0%"}, "-=0.05")
@@ -69,8 +69,8 @@ const tl = gsap.timeline()
 
     tl.to("#package-table", {display: "block"})
     tl.to("#guy-front3", {display: "none"})
-    tl.to("#guy-back3", {display: "block", x:300, y:-30, duration: 2.5})
-    // tl.to("#guy-back3", {x:300, y:-30, duration: 2.5})
+    tl.to("#guy-back3", {display: "block"})
+    tl.to("#guy-back3", {x:300, y:-30, duration: 2.5}, "-=.3")
     tl.to("#arm-back-face-right", {rotate: -30}, "-=0.5")
     tl.to("#guy3", {display: "none"})
     tl.to("#door-open3", {display: "none"}, "-=0.5")

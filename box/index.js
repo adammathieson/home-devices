@@ -2,8 +2,8 @@ import { infoCard } from "../info-card/index.js"
 
 const item = {
     title: "Wyze Cam Outdoor",
-    fact1: "Wireless livestream & recoding",
-    fact2: "6 months per charge",
+    fact1: "Wireless livestream & recording",
+    fact2: "6 month battery life",
     price: "$49.99"
 }
 infoCard(item)
@@ -37,7 +37,7 @@ const tl = gsap.timeline()
     tl.to("#leg-left-3", .2, {rotate: 30}, "-=.1")
     tl.to("#leg-right-4", .2, {rotate: 140, transformOrigin: "10% 50%"}, "-=.3")
     tl.to("#arm-int-left", .2, {rotate: -50}, "-=.2")
-    tl.to("#arm-int-right", .2, {rotate: -100}, "-=.2")
+    tl.to("#arm-int-right", .2, {rotate: -120}, "-=.2")
 
     tl.to("#wyze-logo", {display: "block"})
 
