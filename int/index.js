@@ -8,27 +8,6 @@ const item = {
 }
 infoCard(item)
 
-const msg = document.querySelector("#alert-msg")
-msg.style.display = "none"
-
-const camFeed = document.querySelector("#cam-feed")
-camFeed.style.display = "none"
-
-//Resume 
-const resumeName = document.querySelector("#resume-name").style.display = "none"
-const loader = document.querySelector("#loader").style.display = "none"
-const complete = document.querySelector("#complete").style.display = "none"
-const analyzingResume = document.querySelector("#analyzing-resume").style.display = "none"
-const success = document.querySelector("#Success").style.display = "none"
-const name = document.querySelector("#adam-mathieson").style.display = "none"
-const email = document.querySelector("#email").style.display = "none"
-const phone = document.querySelector("#phone").style.display = "none"
-
-//Cam feed
-const unlocked = document.querySelector("#Unlocked").style.display = "none"
-const rectangle = document.querySelector("#Rectangle-354").style.display = "none"
-
-
 const rArm = TweenMax.fromTo("#arm-int-right", .18, {rotate: 0, x:-2}, {rotate: -3, x:3, ease:Linear.easeNone, repeat:-1, yoyo: true, transformOrigin: "100% 0%"});
 rArm.progress(0.5).pause();
 rArm.play();
@@ -72,6 +51,7 @@ tl.fromTo("#scene-2", 1, {opacity: 0}, {opacity: 1})
     tl.to("#phone", {display: "block"}, "-=0.5")
     
     // Alert msg
+    tl.to("#guy-back, #wyze-logo", {display: "block"})
     tl.to("#msg-box", {stroke: "none"})
     tl.to("#alert-msg", {display: "block", delay: .3})
     tl.fromTo("#alert-msg", {opacity: 0, x: 5}, {opacity: 1, x:0})
@@ -81,7 +61,6 @@ tl.fromTo("#scene-2", 1, {opacity: 0}, {opacity: 1})
     // Cam feed
     tl.to("#cam-feed", {display: "block"})
     tl.to("#alert-msg", {opacity: 0, x: 5, delay: .05})
-    // tl.to("#alert-msg", {display: "none"})
     tl.fromTo("#cursor", {x: 5, y: -43}, {x: -2, y: -15, duration: .6, delay: 1})
     tl.to("#locked", {display: "none"})
     tl.to("#Locked", {display: "none"})

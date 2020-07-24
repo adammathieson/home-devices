@@ -46,8 +46,6 @@ const goToScene2 = () => {
     window.location.pathname = "scene2.html"
 }
 
-// tl.pause()
-
 const tl = gsap.timeline()
     tl.fromTo("#scene-1", 1, {opacity: 0}, {opacity: 1})
     tl.to("#bg-houses", {x: -60, duration: 6, ease: Linear.easeNone}, "-=1.5")
@@ -69,16 +67,5 @@ const tl = gsap.timeline()
     tl.fromTo("#card", .3, {x: 800, y: 240, opacity: 0}, {x: 630, opacity: 1})
     tl.to("#card", .3, {opacity: 0, delay: 4})
 
-    // tl.to("#scene-1", 2, {attr:{viewBox: "570 290 100 70"}, delay: 2})
     tl.to("#scene-1", 2, {attr:{viewBox: "400 200 400 148"}})
     tl.fromTo("#scene-1", .5, {opacity: 1}, {opacity: 0, onComplete: goToScene2})
-
-
-
-// tl.to("#scene-container", {translateX: "-995", duration: 7, ease: 'none'})
-    // tl.to("#guy-side", {display: "none"},"-=0.5")
-    // tl.to("#guy-back", {display: "block"})
-    // tl.to("#guy-back", 3, {scale: 0.43, y:22, x:5, onComplete: stopWalking})
-    // tl.to("#scene-1", {attr:{viewBox: "100 250 207 448"}, duration: 3}, "-=3.2")
-
-    // attr:{viewBox: "0 250 414 400"}

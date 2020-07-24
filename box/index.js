@@ -8,11 +8,6 @@ const item = {
 }
 infoCard(item)
 
-const top = document.querySelector("#box-open").style.display = "none"
-const cam = document.querySelector("#wyze-outdoor-cam").style.display = "none"
-const base = document.querySelector("#base").style.display = "none"
-const logo = document.querySelector("#wyze-logo").style.display = "none"
-
 const replay = () => {
     window.location.pathname = '/index.html'
 }
@@ -22,6 +17,7 @@ btn.addEventListener("click", replay)
 
 
 const tl = gsap.timeline()
+    tl.to("#package-table", {display: "block"})
     tl.fromTo("#guy4, #chair-front", 2, {x: 1000}, {x: 0, ease: Linear.easeNone})
     tl.to("#chair-front", 2, {x: -1000, ease: Linear.easeNone})
     tl.to("#guy4", .15, {y:-20, }, "-=2")

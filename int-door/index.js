@@ -1,14 +1,5 @@
 import { infoCard } from "../info-card/index.js"
 
-const guy = document.querySelector("#guy3")
-guy.style.display = "none"
-
-const doorOpen = document.querySelector("#door-open3")
-doorOpen.style.display = "none"
-
-const packageTable = document.querySelector("#package-table")
-packageTable.style.display = "none"
-
 const rLegBack = TweenMax.fromTo("#leg-right-back-3", .5, {rotate: 6}, {rotate: -6, ease:Linear.easeNone, repeat:-1, yoyo: true});
 rLegBack.progress(0.5).pause();
 rLegBack.play();
