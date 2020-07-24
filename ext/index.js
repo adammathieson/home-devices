@@ -36,7 +36,7 @@ const goToScene2 = () => {
 // tlWalk.pause()
 
 const tl = gsap.timeline()
-    tl.fromTo("#scene-1", 1.5, {opacity: 0}, {opacity: 1})
+    tl.fromTo("#scene-1", 1, {opacity: 0}, {opacity: 1})
     tl.to("#bg-houses", {x: -60, duration: 6, ease: Linear.easeNone}, "-=1.5")
     tl.to("#foreground", {x: -650, duration: 6, ease: Linear.easeNone}, "-=6")
     tl.to("#guy", {x: 500, duration: 3, ease: Linear.easeNone})

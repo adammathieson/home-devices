@@ -36,12 +36,13 @@ const stopTyping = () => {
 }
 
 const goToScene3 = () => {
-    // window.location.pathname = '/scene3.html'
+    window.location.pathname = '/scene3.html'
 }
 
 const tl = gsap.timeline()
-    tl.to("#scene-2", {attr:{viewBox: "483 155 100 50"}, delay: 2, duration: 1})
-    tl.to("#scene-2", {attr:{viewBox: "0 0 838 596"}, delay: 2, duration: 1})
+tl.fromTo("#scene-2", 1, {opacity: 0}, {opacity: 1})
+    tl.to("#scene-2", {attr:{viewBox: "483 155 100 50"}, delay: 2, duration: 2})
+    tl.to("#scene-2", {attr:{viewBox: "0 0 838 596"}, delay: 2, duration: 2})
     tl.to("#scene-2", {attr:{viewBox: "260 275 150 100"}, duration: 2, onComplete: stopTyping})
 
     // Filling out application
@@ -72,7 +73,8 @@ const tl = gsap.timeline()
     tl.fromTo("#cursor", {x: 5, y: -43}, {x: -2, y: -15, duration: .6})
     tl.to("#locked", {display: "none"})
     tl.to("#Locked", {display: "none"})
-    tl.to("#Unlocked", {display: "block", onComplete: goToScene3})
+    tl.to("#Unlocked", {display: "block"})
+    tl.fromTo("#scene-2", 1, {opacity: 1}, {opacity: 0, onComplete: goToScene3})
     
 
 
