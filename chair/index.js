@@ -4,6 +4,7 @@ const goToScene5 = () => {
 }
 
 const tl = gsap.timeline()
+    tl.set("#guy4, #chair-front", {display: "block"})
     tl.to("#scene-4", 1, {opacity: 1})
     tl.to("#arm-int-right", 0.15, {y:-5, repeat: 2, delay: 1})
     tl.to("#window-job-app", 0, {display: "none"})
