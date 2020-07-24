@@ -17,8 +17,8 @@ btn.addEventListener("click", replay)
 
 
 const tl = gsap.timeline()
-    tl.to("#package-table", {display: "block"})
-    tl.fromTo("#guy4, #chair-front", 2, {x: 1000}, {x: 0, ease: Linear.easeNone})
+    tl.set("#package-table", {display: "block"})
+    tl.fromTo("#guy4, #chair-front", 2, {x: 1000, display: "block"}, {x: 0, ease: Linear.easeNone})
     tl.to("#chair-front", 2, {x: -1000, ease: Linear.easeNone})
     tl.to("#guy4", .15, {y:-20, }, "-=2")
     tl.to("#leg-left-3", .2, {rotate: 70, transformOrigin: "15% 10%"}, "-=2")
