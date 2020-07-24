@@ -62,7 +62,7 @@ const tl = gsap.timeline()
     tl.to("#card", .3, {opacity: 0, delay: 4})
     tl.to("#card", {display: "none", onComplete: swapItem})
 
-    tl.to("#scene-1", 2, {attr:{viewBox: "600 310 80 40"}})
+    tl.to("#scene-1", 2, {attr:{viewBox: "600 310 80 40"}}, "-=.5")
     tl.to("#card", {display: "block"})
     tl.fromTo("#card", .3, {x: 800, y: 240, opacity: 0}, {x: 630, opacity: 1})
     tl.to("#card", .3, {opacity: 0, delay: 4})
