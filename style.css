@@ -5,16 +5,17 @@ body {
 }
 
 .container {
-    /* border: 1px solid red; */
-
     height: 100vh;
     width: 100vw;
+    /* max-width: 1200px; */
+
 }
+
 svg {
     height: 100%;
     width: 100%;
 } 
 
 #guy {
-    transform: translateX(10%);
+    transform: translateX(20%);
 }
