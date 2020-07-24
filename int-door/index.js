@@ -29,6 +29,10 @@ const stopStep = () => {
     rLegFront.pause()
 }
 
+const goToScene4 = () => {
+    window.location.pathname = '/scene4.html'
+}
+
 const tl = gsap.timeline()
     tl.fromTo("#scene-3", 1, {opacity: 0}, {opacity: 1})      
     tl.to("#scene-3", {attr:{viewBox: "475 290 100 50"}, delay: 2, duration: 1})
@@ -61,7 +65,7 @@ const tl = gsap.timeline()
     tl.to("#door3", {display: "block"})
     tl.to("#guy-front-static", {display: "block", x:-30, duration: 0}, "-=.5")
     tl.to("#guy-front-static", { x: -50, y: 100, scale: 0.8, duration: 2.2})
-    tl.fromTo("#scene-3", 1, {opacity: 1}, {opacity: 0})
+    tl.fromTo("#scene-3", 1, {opacity: 1}, {opacity: 0, onComplete: goToScene4})
 
 
     

@@ -1,6 +1,6 @@
 
 const goToScene5 = () => {
-    // window.location.pathname = '/scene5.html'
+    window.location.pathname = '/scene5.html'
 }
 
 const tl = gsap.timeline()

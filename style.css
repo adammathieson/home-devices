@@ -1,7 +1,6 @@
 body {
     background: #353434;
     margin: 0 auto;
-
 }
 
 .container {
@@ -19,3 +18,24 @@ svg {
 #guy {
     transform: translateX(20%);
 }
+
+#card {
+    max-width: 50%;
+    max-height: 800px;
+    padding: .5em 2em;
+    /* width: 30%; */
+    /* height: 50%; */
+    background: #DAE0EB;
+    position: absolute;
+    /* right: 10%;
+    top: 50%; */
+    /* transform: translateY(-50%); */
+    border-radius: 5px;
+    color: #333333;
+
+}
+#title, #price{
+    font-weight: 700;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
