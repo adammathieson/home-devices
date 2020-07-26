@@ -34,10 +34,25 @@ const item = {
 infoCard(item)
 
 const tl = gsap.timeline()
-    tl.to("#scene-3", 1, {opacity: 1})      
-    tl.to("#scene-3", {attr:{viewBox: "475 290 100 50"}, delay: 1, duration: 1})
+    tl.to("#scene-3", 1, {opacity: 1})  
+
+    // zoom in on product
+    if (window.innerWidth < 501) {
+        // console.log("<501")
+        tl.to("#scene-3", {attr:{viewBox: "502 290 50 30"}, duration: 1})
+            .set("#card", {x: 0, y: 0, width: window.innerWidth})
+        
+    } else if (window.innerWidth < 1000) {
+        tl.to("#scene-3", {attr:{viewBox: "475 290 100 50"}, duration: 1})
+            .set("#card", {x: "10%", y: "10%"})
+
+    } else {
+        // console.log('>1200')
+        tl.to("#scene-3", {attr:{viewBox: "475 290 100 50"}, duration: 1})
+            .set("#card", {x: "100%", y: "100%"})
+    }    
+
     tl.to("#card", {display: "block"})
-    tl.fromTo("#card", .3, {x: 20, y: 180, opacity: 0}, {x: 200, opacity: 1})
     tl.to("#card", .3, {opacity: 0, delay: 4})
 
     tl.to("#lock-turn", {rotate: 90, duration: 2, delay: 0.5, ease: Linear.easeNone, transformOrigin: "50% 50%"}, "-=1")

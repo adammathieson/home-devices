@@ -33,7 +33,7 @@ const tl = gsap.timeline()
     // zoom in on product
     if (window.innerWidth < 501) {
         // console.log("<501")
-        tl.to("#scene-5", {attr:{viewBox: "100 200 200 120"}, duration: 1}, "-=1")
+        tl.to("#scene-5", {attr:{viewBox: "120 240 140 50"}, duration: 1}, "-=1")
             .set("#card", {x: 0, y: 0, width: window.innerWidth})
         
     } else if (window.innerWidth < 1000) {
@@ -47,19 +47,19 @@ const tl = gsap.timeline()
     }
     tl.to("#card", {display: "block"})
     
-    // tl.to("#card", .3, {opacity: 0, delay: 4})
-    // tl.to("#scene-5", {attr:{viewBox: "0 0 838 596"}, duration: 1})
+    tl.to("#card", .3, {opacity: 0, delay: 4})
+    tl.to("#scene-5", {attr:{viewBox: "0 0 838 596"}, duration: 1})
 
-    // tl.to("#guy4", .2, {y: -100, rotate: 10})
-    // tl.to("#leg-left-3", .2, {rotate: 30}, "-=.1")
-    // tl.to("#leg-right-4", .2, {rotate: 140, transformOrigin: "10% 50%"}, "-=.3")
-    // tl.to("#arm-int-left", .2, {rotate: -50}, "-=.2")
-    // tl.to("#arm-int-right", .2, {rotate: -120}, "-=.2")
+    tl.to("#guy4", .2, {y: -100, rotate: 10})
+    tl.to("#leg-left-3", .2, {rotate: 30}, "-=.1")
+    tl.to("#leg-right-4", .2, {rotate: 140, transformOrigin: "10% 50%"}, "-=.3")
+    tl.to("#arm-int-left", .2, {rotate: -50}, "-=.2")
+    tl.to("#arm-int-right", .2, {rotate: -120}, "-=.2")
 
-    // tl.to("#wyze-logo", {display: "block"})
+    tl.to("#wyze-logo", {display: "block"})
 
-    // tl.to("#replay", .2, {display: "block"})
-    //     .fromTo("#replay", .4, {opacity: 0, y:10, rotate: -10}, {opacity: 1, y:0, rotate: 0})
+    tl.to("#replay", .2, {display: "block"})
+        .fromTo("#replay", .4, {opacity: 0, y:10, rotate: -10}, {opacity: 1, y:0, rotate: 0})
 
 
     

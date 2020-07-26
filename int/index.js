@@ -28,15 +28,35 @@ const goToScene3 = () => {
 const tl = gsap.timeline()
 tl.set("#chair-front", {display: "block"})
     tl.to("#scene-2", 1, {opacity: 1})
-    tl.to("#scene-2", {attr:{viewBox: "483 155 100 50"}, delay: 2, duration: 2})
+
+     // zoom in on product
+    if (window.innerWidth < 501) {
+        // console.log("<501")
+        tl.to("#scene-2", 1, {attr:{viewBox: "510 140 50 50"}})
+            .set("#card", {x: 0, y: 0, width: window.innerWidth})
+        
+    } else if (window.innerWidth < 1000) {
+        tl.to("#scene-2", 1, {attr:{viewBox: "483 155 100 50"}})
+            .set("#card", {x: "10%", y: "10%"})
+
+    } else {
+        // console.log('>1200')
+        tl.to("#scene-2", 1, {attr:{viewBox: "483 155 100 50"}})
+            .set("#card", {x: "40%", y: "40%"})
+    }    
+
     tl.to("#card", {display: "block"})
-    tl.fromTo("#card", .3, {x: 20, y: 180, opacity: 0}, {x: 150, opacity: 1})
     tl.to("#card", .3, {opacity: 0, delay: 4})
 
-    tl.to("#scene-2", {attr:{viewBox: "0 0 838 596"}, duration: 2})
-    tl.to("#scene-2", {attr:{viewBox: "260 275 150 100"}, duration: 2, onComplete: stopTyping})
+    tl.to("#scene-2", {attr:{viewBox: "200 200 400 300"}, duration: 2})
+    if (window.innerWidth <501) {
+        // console.log("<501")
+        tl.to("#scene-2", {attr:{viewBox: "260 300 100 40"}, duration: 2, onComplete: stopTyping})
+    } else {
+        tl.to("#scene-2", {attr:{viewBox: "260 275 150 100"}, duration: 2, onComplete: stopTyping})
+    }
 
-    // Filling out application
+    // // Filling out application
     tl.to("#cursor", {x:-50, y:-13, duration: 1.5})
     tl.to("#loader", {display: "block"})
     tl.to("#analyzing-resume", {display: "block"})
