@@ -4,8 +4,16 @@ body {
 }
 
 .container {
-    height: 100vh;
+  
+
+
     width: 100vw;
+    height: 100vh;
+
+    @media only screen and (max-width: 501px) {
+        /* height: 100vh;   */
+        /* width: 100vw; */
+    }
 }
 
 svg {
@@ -19,15 +27,15 @@ svg {
 
 #card {
     display: none;
-    max-width: 50%;
-    max-height: 800px;
     padding: .5em 2em;
     background: #DAE0EB;
     position: absolute;
     border-radius: 5px;
     color: #333333;
 
+    
 }
+
 #title, #price{
     font-weight: 700;
     font-family: 'Red Hat Display', sans-serif;
@@ -35,6 +43,10 @@ svg {
 
 /* Button */
 #replay {
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
     display: none;
     border-radius: 5px;
     background: #DAE0EB;
@@ -44,11 +56,9 @@ svg {
     font-size: 1.2rem;
     text-align: center;
     font-weight: 700;
-    position: absolute;
-    right: 15%;
-    top: 5%;
     border: none;
     cursor: pointer;
+    z-index: 1;
 }
 
 /* Some preset for images to start out */
