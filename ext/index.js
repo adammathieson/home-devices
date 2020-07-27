@@ -46,25 +46,59 @@ const goToScene2 = () => {
 
 const tl = gsap.timeline()
     tl.to("#scene-1", 1, {opacity: 1})
-    tl.to("#bg-houses", {x: -60, duration: 6, ease: Linear.easeNone}, "-=1.5")
-    tl.to("#foreground", {x: -650, duration: 6, ease: Linear.easeNone}, "-=6")
-    
-    tl.to("#guy", {x: 500, duration: 3, ease: Linear.easeNone})
+    // tl.to("#bg-houses", {x: -60, duration: 6, ease: Linear.easeNone}, "-=1.5")
+    // tl.to("#foreground", {x: -650, duration: 6, ease: Linear.easeNone}, "-=6")
+
+    tl.fromTo("#guy", 3, {x: -200}, {x: 290, ease: Linear.easeNone})
     tl.to("#guy-side", {display: "none", duration: 0})
     tl.to("#guy-back", {display: "block", duration: 0})
-    tl.to("#scene-1", 3,{attr:{viewBox: "400 200 400 148"}})
-    tl.to("#guy", 3, {scale:0.43, y: -16, onComplete: stopWalking}, "-=3")
+    tl.to("#scene-1", 3,{attr:{viewBox: "250 250 400 200"}})
+    tl.to("#guy", 3, {scale:0.38 , y: -3, onComplete: stopWalking}, "-=3")
 
-    tl.to("#scene-1", 2, {attr:{viewBox: "585 260 80 40"}})
+    // zoom in on product 1
+    if (window.innerWidth < 501) {
+        // console.log("<501")
+        tl.to("#scene-1", 2,{attr:{viewBox: "470 305 30 10"}})
+            .set("#card", {x: 0, y: 0, width: window.innerWidth})
+        
+    } else if (window.innerWidth < 800) {
+        // console.log('<800')
+        tl.to("#scene-1", 2, {attr:{viewBox: "470 300 50 30"}})
+            .set("#card", {x: "80%", y: "100%"})
+
+    } else if (window.innerWidth < 1000) {
+        tl.to("#scene-1", 2, {attr:{viewBox: "470 300 50 30"}})
+            .set("#card", {x: "120%", y: "100%"})
+    } else {
+        // console.log('>1200')
+        tl.to("#scene-1", 2,{attr:{viewBox: "470 300 50 30"}})
+            .set("#card", {x: "170%", y: "100%"})
+    }  
     tl.to("#card", {display: "block"})
-    tl.fromTo("#card", .3, {x: 100, y: 300, opacity: 0}, {x: 370, opacity: 1})
     tl.to("#card", .3, {opacity: 0, delay: 4})
     tl.to("#card", {display: "none", onComplete: swapItem})
 
-    tl.to("#scene-1", 2, {attr:{viewBox: "600 310 80 40"}}, "-=.5")
-    tl.to("#card", {display: "block"})
-    tl.fromTo("#card", .3, {x: 800, y: 240, opacity: 0}, {x: 630, opacity: 1})
+    // zoom in on product 2
+    if (window.innerWidth < 600) {
+        // console.log("<501")
+        tl.to("#scene-1", 2,{attr:{viewBox: "460 350 30 10"}})
+            .set("#card", {x: 0, y: 0, width: window.innerWidth})
+        
+    } else if (window.innerWidth < 800) {
+        // console.log('<800')
+        tl.to("#scene-1", 2, {attr:{viewBox: "465 350 40 20"}})
+            .set("#card", {x: "110%", y: "100%"})
+
+    } else if (window.innerWidth < 1000) {
+        tl.to("#scene-1", 2, {attr:{viewBox: "460 350 40 20"}})
+            .set("#card", {x: "140%", y: "100%"})
+    } else {
+        // console.log('>1000')
+        tl.to("#scene-1", 2,{attr:{viewBox: "460 350 40 20"}})
+            .set("#card", {x: "200%", y: "100%"})
+    }  
+    tl.to("#card", {display: "block", opacity: 1})
     tl.to("#card", .3, {opacity: 0, delay: 4})
 
-    tl.to("#scene-1", 2, {attr:{viewBox: "400 200 400 148"}})
+    tl.to("#scene-1", 2, {attr:{viewBox: "250 250 400 200"}})
     tl.to("#scene-1", .5, {opacity: 0, onComplete: goToScene2})
