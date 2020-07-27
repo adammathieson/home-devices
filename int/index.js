@@ -32,16 +32,16 @@ tl.set("#chair-front", {display: "block"})
      // zoom in on product
     if (window.innerWidth < 501) {
         // console.log("<501")
-        tl.to("#scene-2", 1, {attr:{viewBox: "510 140 50 50"}})
+        tl.to("#scene-2", 1, {attr:{viewBox: "510 140 50 50"}}, "+=1")
             .set("#card", {x: 0, y: 0, width: window.innerWidth})
         
     } else if (window.innerWidth < 1000) {
-        tl.to("#scene-2", 1, {attr:{viewBox: "483 155 100 50"}})
+        tl.to("#scene-2", 1, {attr:{viewBox: "483 155 100 50"}}, "+=1")
             .set("#card", {x: "10%", y: "10%"})
 
     } else {
         // console.log('>1200')
-        tl.to("#scene-2", 1, {attr:{viewBox: "483 155 100 50"}})
+        tl.to("#scene-2", 1, {attr:{viewBox: "483 155 100 50"}}, "+=1")
             .set("#card", {x: "40%", y: "40%"})
     }    
 

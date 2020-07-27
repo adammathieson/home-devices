@@ -28,7 +28,7 @@ const goToScene4 = () => {
 const item = {
     title: "Wyze Lock",
     fact1: "Remote Access",
-    fact2: "Auto lock / unlock",
+    fact2: "Auto lock/unlock",
     price: "$99.99"
 }
 infoCard(item)
